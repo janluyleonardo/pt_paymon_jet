@@ -20,7 +20,7 @@ class CourseController extends Controller
      */
     public function index()
     {
-        $courses = Course::with('multimedia')
+        $courses = Course::with('video')
             ->leftJoin('categories', 'courses.category_id', '=', 'categories.id')
             ->leftJoin('age_ranges', 'courses.age_range_id', '=', 'age_ranges.id')
             ->addSelect('courses.*', 'categories.name as category_name', 'age_ranges.range as age_range')

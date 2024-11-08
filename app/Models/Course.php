@@ -17,10 +17,10 @@ class Course extends Model
         'age_range_id',
     ];
 
-    public function multimedia()
-    {
-        return $this->hasMany(Multimedia::class, 'course_id', 'id');
-    }
+    // public function multimedia()
+    // {
+    //     return $this->hasMany(Multimedia::class, 'course_id', 'id');
+    // }
     public function category()
     {
         return $this->belongsTo(Category::class);
@@ -28,5 +28,9 @@ class Course extends Model
     public function range()
     {
         return $this->belongsTo(AgeRange::class);
+    }
+    public function video()
+    {
+        return $this->hasMany(Video::class);
     }
 }

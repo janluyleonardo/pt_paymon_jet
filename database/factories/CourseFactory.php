@@ -20,8 +20,8 @@ class CourseFactory extends Factory
             'name' => $name,
             'slug' => Str::slug($name, '-'),
             'description' => $this->faker->paragraph(),
-            'category' => $this->faker->randomElement(['Desarrollo WEB', 'Diseño WEB', 'BIG-Data', 'Marketing-Digital']),
-            'age_group' => $this->faker->randomElement(['5-8', '9-13', '14-16', '16+']),
+            'category_id' => $this->faker->randomElement(['1', '2', '3', '4', '5']),
+            'age_range_id' => $this->faker->randomElement(['1', '2', '3', '4']),
         ];
     }
 }
